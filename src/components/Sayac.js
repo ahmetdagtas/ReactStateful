@@ -14,14 +14,14 @@ Saf bir geliştirici 3 farklı state dilimi diyebilir:
 Ancak burada sadece bir state gereklidir: sayici!
 Diğer şeyler basitçe sayımın kendisinden türetilebilir.
 
-ADIM 0:
+ADIM 0: - DONE
   Aşağıdaki bileşeni inceleyerek ve state hookunu import ederek başlayın.
 
-ADIM 1:
+ADIM 1: - DONE
   State hookunu kullanara, bir 'sayici', 'setSayici' çifti oluşturun.
   'sayici' state'inin ilk değeri 0 olarak yüklenmelidir.
 
-ADIM 2:
+ADIM 2: - DONE
   'stil' nesnesinde 'color' niteliği sabit olarak "royalblue" olarak belirlenmiştir.
   Bunun yerine 'color' değerinin ne olması gerektiği, şu şekilde belirlenmelidir:
   Eğer sayici çiftse "royalblue", değilse "crimson" olmalıdır.
@@ -45,11 +45,11 @@ ADIM 6:
 	Bu click handler 'sayici' yı sıfırlamak için 'setSayici' yi kullanacak.
 */
 
-import React from "react"; /* ADIM 0 buraya*/
+import React, { useState } from "react"; /* ADIM 0 buraya*/
 
 export default function Sayac() {
-  /* ADIMbun 1 buraya*/
-  const { sayici, setSayici } = React.useState(0);
+  /* ADIM bun 1 buraya */
+  const [sayici, setSayici] = useState(0);
 
   const artirici = () => {
     setSayici(sayici + 1);
